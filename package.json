@@ -8,9 +8,11 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node src/index.ts",
+    "start": "node dist/index.ts",
     "dev": "nodemon --config nodemon.json src/index.ts",
-    "dev:debug": "nodemon --config nodemon.json --inspect=0.0.0.0 src/index.ts"
+    "dev:debug": "nodemon --config nodemon.json --inspect=0.0.0.0 src/index.ts",
+    "build": "tsc",
+    "postinstall": "npm run build"
   },
   "author": "Long",
   "license": "ISC",
