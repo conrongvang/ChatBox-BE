@@ -24,7 +24,7 @@ server.use(function (_: Request, res: Response, next: any) {
 });
 
 mongoose.connect(
-    process.env.MONGO_URL, 
+    process.env.MONGO_URL || "mongodb+srv://conrongvang:P@$$w0rd@cluster0.xahx1.mongodb.net/chat-box?retryWrites=true&w=majority", 
     {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
